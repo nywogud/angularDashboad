@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -86,29 +87,32 @@ public class homeController {
 	// 각 메소트 별 성공 건수 조회, 전송(ajax 통신, button1)
 	@RequestMapping(value = "/sucResultNum", method = RequestMethod.POST)
 	@ResponseBody
-	public String sucResultNum() throws Exception {
+	public JSONObject sucResultNum() throws Exception {
 		List<DataModel> ResultNum = dataService.getSucResultNum();
 		SucResultNum sucResultNum = new SucResultNum();
 		String scriptButton1 = sucResultNum.sucResultNum(ResultNum);
 
-		return scriptButton1;
+		JSONObject str = new JSONObject();
+		str.put("scriptButton1", scriptButton1);
+		return str;
 	}
 
 	// 각 메소트 별 실패 건수 조회, 전송(ajax 통신, button2)
 	@RequestMapping(value = "/failResultNum", method = RequestMethod.POST)
 	@ResponseBody
-	public String failResultNum() throws Exception {
+	public JSONObject failResultNum() throws Exception {
 		List<DataModel> ResultNum = dataService.getFailResultNum();
 		FailResultNum failResultNum = new FailResultNum();
 		String scriptButton2 = failResultNum.failResultNum(ResultNum);
-
-		return scriptButton2;
+		JSONObject str = new JSONObject();
+		str.put("scriptButton2", scriptButton2);
+		return str;
 	}
 
 	// 각 메소트 별 성공 건수 대비 실패 건수(ajax 통신, button3)
 	@RequestMapping(value = "/sucPerFail", method = RequestMethod.POST)
 	@ResponseBody
-	public String sucPerFail() throws Exception {
+	public JSONObject sucPerFail() throws Exception {
 		List<DataModel> sucResultNum = dataService.getSucResultNum();
 		List<DataModel> failResultNum = dataService.getFailResultNum();
 
@@ -121,8 +125,9 @@ public class homeController {
 
 		SucPerFail sucPerFail = new SucPerFail();
 		String scriptButton3 = sucPerFail.sucPerFail(sucResultNum, sucPerFailResult);
-
-		return scriptButton3;
+		JSONObject str = new JSONObject();
+		str.put("scriptButton3", scriptButton3);
+		return str;
 	}
 
 	// 파일 업로드 맵핑. 디비 델리트와 커밋, 인서트와 커밋을 진행하고서 다시 홈 화면으로 redirect함.

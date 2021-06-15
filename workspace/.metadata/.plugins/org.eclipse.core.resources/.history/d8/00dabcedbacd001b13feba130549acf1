@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Dash board</title>
+
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+
+	<script>
+		var app = angular.module("ajaxCom",[]);
+
+		app.controller("con1", function ($scope, $http) {
+			$scope.button1 = function (){
+				
+				var http = $http({
+					method : "POST",
+					url : "/templates/test.html"
+				})
+				
+				http.then(function(response){
+					$scope.result = response.data
+				})
+			}
+			$scope.button2 = function (){
+				alert("button2")
+			}
+
+			$scope.button3 = function (){
+				alert("button3")
+			}
+		})
+	</script>
+</head>
+
+<body>
+	<div ng-app="ajaxCom" ng-controller="con1">
+		<h2>Hello World</h2>
+
+		<button type="button" style="display: inline-block;" ng-click="button1()">버튼1</button>
+		<button type="button" style="display: inline-block;" ng-click="button2()">버튼2</button>
+		<button type="button" style="display: inline-block;" ng-click="button3()">버튼3</button>
+		<P>{{result}}</P>
+
+		<form style="display: inline-block; float: right;" method="POST" action="/fileUpload" enctype="multipart/form-data">
+			<input name="fileCsv" type="file" placeholder="CVS파일 업로드" /> <input type="submit" name="upload"
+				value="CSV파일 올리기" />
+		</form>
+		<div>
+			<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<!-- 결제 수단별 시도 횟수 차트. 차트 1번 -->
+			<div th:utext="${script1String}"></div>
+			<div style="display: inline-block; width: 600px; height: 350px;" id="numAttem"></div>
+
+			<!-- 아작스 통신 시 바꿔 끼울 코드(초기값은 버튼 1) -->
+			<div id="convertChart" style="display: inline-block;">
+				
+			<div th:utext="${scriptButton1}"></div>
+			</div>
+		</div>
+		<br>
+
+		<div>
+			<!-- 시도 횟수 분포 차트. 차트 2번 -->
+			<div th:utext="${script2String}"></div>
+			<div id="countNumAttem" style="display: inline-block; width: 600px; height: 300px;"></div>
+
+			<!-- 결제 수단별 시도횟수 표 -->
+			<div style="display: inline-block">
+				<table border="1">
+					<tr>
+						<th>번호</th>
+						<th style="width: 200px;">인증수단</th>
+						<th style="width: 200px;">시도횟수</th>
+					</tr>
+					<span th:utext="${numAttemWithRowNum}"></span>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
