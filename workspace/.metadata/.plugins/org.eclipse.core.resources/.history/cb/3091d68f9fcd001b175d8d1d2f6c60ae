@@ -1,0 +1,13 @@
+#jsp 사용 설정
+#spring.mvc.view.prefix=/WEB-INF/views/
+#spring.mvc.view.suffix=.jsp
+
+#html
+spring.thymeleaf.prefix=classpath:/templates/ 
+spring.thymeleaf.suffix=.html
+
+#Oracle DataSource
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521/orcl
+spring.datasource.username=sys as sysdba
+spring.datasource.password=1111
