@@ -6358,3 +6358,87 @@ org.eclipse.core.runtime.CoreException: Launch configuration DashBoardApplicatio
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 org.eclipse.jdt.launching 4 107 2021-06-15 15:11:12.841
 !MESSAGE Launch configuration DashBoardApplication references non-existing project dashBoard.
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.332
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.333
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.336
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.339
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.358
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.361
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.364
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.367
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:19:59.515
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:21:21.142
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:21:21.144
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:21:21.160
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.eclipse.lsp4e 4 0 2021-06-15 15:21:22.385
+!MESSAGE [Error]	Notification handler 'textDocument/didChange' failed with message: length < 0
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:11.979
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:11.980
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@18e5c479[org.springframework.tooling.boot.ls:1.25.0.202103111026(id=966)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:11.983
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:12.018
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:15.846
+!MESSAGE Boot LS startup time from start to initialized: 3854ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.070
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.xKWMcrZEisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.074
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.076
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.077
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.078
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.078
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.xKWMcrZE => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.088
+!MESSAGE classpath=83 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.094
+!MESSAGE buffering callback sts4.classpath.xKWMcrZE dashBoard false 83
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.095
+!MESSAGE executing callback sts4.classpath.xKWMcrZE 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-06-15 16:22:16.929
+!MESSAGE executing callback sts4.classpath.xKWMcrZE SUCCESS [done]
